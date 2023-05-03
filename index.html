@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Personal Website</title>
+    <style>
+      body{
+        background-color: rgba(162, 179, 201, 0.667);
+      }
+      img{
+        float: right;
+      }
+
+      fieldset{
+        margin-top: 100px;
+        margin-bottom: 50px;
+        margin-left: 200px;
+        margin-right: 200px;
+        padding-bottom: 0%;
+     
+      }
+
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+      
+      .menu-toggle {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 1;
+      }
+      
+      .menu-toggle:hover {
+        color: #aaa;
+      }
+      
+      .menu {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        box-sizing: border-box;
+        transition: all 0.3s ease-in-out;
+        z-index: 1;
+      }
+      
+      .menu.show {
+        left: 0;
+      }
+      
+      .menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .menu ul li {
+        margin-bottom: 10px;
+      }
+      
+      .menu ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+        transition: all 0.3s ease-in-out;
+      }
+      
+      .menu ul li a:hover {
+        color: #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+    <section>
+      <div class="menu-toggle">&#9776;</div>
+  <div class="menu">
+    <menu>
+    <ul>
+      
+      <li><a href="contact us.html">Contact Us</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </menu>
+  </div>
+   
+    <script>
+      const menuToggle = document.querySelector('.menu-toggle');
+      const menu = document.querySelector('.menu');
+      
+      menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('show');
+      });
+    </script>
+
+    
+      
+  
+
+    
+      
+      
+     
+
+        <h1>PERSONAL INFORMATION</h1>
+        <img src="sagawala.jpg" alt="sagawala photo" width="200px">
+        <ul>
+          <li>Name: John Sagawala Komba </li>
+          <li>Email: johnsagawala360@gmail.com</li>
+          <li>Phone: 0778831449</li>
+          <li>Address: Zanzibar urban </li>
+        </ul>
+      </section>
+      <section>
+        <h2>EDUCATIONAL BACKGROUND</h2>
+        <ul>
+          <li>|Certificate of advanced secondary Educational</li>
+          <li>certifictae of secondary education</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>WORKING EXPIRIENCE</h2>
+        <ul>
+          <li>IT support , Suza ICT Center(2022)</li>
+          <li>software developer , Suza Young Developers(2022)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>SKILLS</h2>
+        <ul>
+          <li>System design and analysis</li>
+          <li>SQL</li>
+          <li>Networking</li>
+          <li>sotware development</li>
+          <li>web development</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>PROFFESSIONAL COURSE</h2>
+        <ul>
+          <li>Basic Computer apllication</li>
+         
+        </ul>
+      </section>
+
+      <section>
+        <h2>PROJECTS</h2>
+        <ul>
+          <li>
+            Project Title: Marine Data Colletion System
+            <br />
+            Technology Used: HTML,CSS,PHP,MySQL,ARDUINO
+            <br />
+            Client: Department of marine statitics and management Zanzibar
+            <br />
+            Role: Assistant Project Manager
+            <br />
+            Date of Completion:Oct 2022
+          </li>
+         
+        </ul>
+      </section>
+
+      <section>
+        <h2>MANAGEMENT EXPIRIENCE</h2>
+        <ul>
+          <li>Team Lead, SUZA ICT Center (2022)</li>
+          <li>Project Manager, CODEATHON(2022)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>DEPENDENTS</h2>
+        <ul>
+          <li>Parents</li>
+         
+        </fieldset>
+</html>

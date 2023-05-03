@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+   
+
+
+    <script>
+
+
+document.addEventListener('DOMContentLoaded',()=>{
+    let name = document.querySelector('#name');
+    let email = document.querySelector('#email');
+    let namei = document.querySelector('#namei');
+    let emaili = document.querySelector('#emaili');
+    let address = document.querySelector('#address');
+    let comment= document.querySelector('#comment');
+    let error= document.querySelector('#error');
+
+    namei.textContent = localStorage.getItem('name');
+    emaili.textContent = localStorage.getItem('email');
+    comment.textContent = localStorage.getItem('comment');
+    address.textContent = localStorage.getItem('address');
+
+    document.querySelector('#formLogin').onsubmit = ()=>{
+        
+         if((name.value) ===(localStorage.getItem('name')) && (email.value) ===(localStorage.getItem('email'))){
+           
+            
+         window.location.href = 'index.html';
+         }else{
+             error.textContent = "enter credetnials";
+             error.style.color = 'green';
+         }
+         return false;
+     }
+ });
+
+ document.addEventListener('DOMContentLoaded',()=>{
+    let name = document.querySelector('#name');
+    let email = document.querySelector('#email');
+    let address = document.querySelector('#address');
+    let comment= document.querySelector('#comment');
+    document.querySelector('#formContact').onsubmit = ()=>{
+        
+         localStorage.setItem('name',name.value);
+         localStorage.setItem('email',email.value);
+         localStorage.setItem('address',address.value);
+         localStorage.setItem('comment',comment.value);
+        
+         window.location.href = 'index.html';
+         return false;
+     }
+ });
+    </script>
+    <style>
+    body{
+       background-color:rgba(162, 179, 201, 0.667);
+    }
+    
+    input{
+  width: 35%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+</style></head>
+
+<body>
+    <center>
+    <div class="containerL">
+        <div class="login">
+           <h2>LOGIN</h2>
+           <form id="formLogin">
+            <label for="">Name</label><br>
+            <input type="text" id="name" required="" placeholder="Enter Name"><br><br>
+            <label for="">Email</label><br>
+            <input type="email" id="email" required="" placeholder="Enter Email"><br><br>
+            <input type="submit" id="submit" value="LOGIN">
+           </form>
+           <label id="error" style="color: rgb(4, 46, 25);">please Enter Your user name and email!</label>
+
+           <h3>TAKE NOTES</h3>
+           <label for="">Name: <span id="namei"></span></label><br><br>
+           <label for="">Email: <span id="emaili"></span></label><br><br>
+           <label for="">Address: <span id="address"></span></label><br><br>
+           <label for="">Comments: <span id="comment"></span></label><br><br>
+        </div>
+    </div>
+
+</body>
+</html>
